@@ -49,6 +49,7 @@ type OrderRequest struct {
 	SKUS            []SKURequest `json:"skus"`
 	RequestDate     string       `json:"request_date"`
 	RequestTimeslot string       `json:"request_timeslot"`
+	AgentOrderID    string       `json:"agent_order_id"`
 	Travelers       []Traveler   `json:"travelers"`
 	Contact         Contact      `json:"contact"`
 }
