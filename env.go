@@ -18,8 +18,8 @@ const (
 )
 
 var typeString = map[Env]string{
-	SandboxLogin:    "http://sandbox-login.klktech.com",
-	ProductionLogin: "http://login.klktech.com",
+	SandboxLogin:    "https://sandbox-login.klktech.com",
+	ProductionLogin: "https://login.klktech.com",
 	Sandbox:         "http://sandbox-api.klktech.com",
 	Production:      "http://api.klktech.com",
 }
