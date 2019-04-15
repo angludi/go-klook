@@ -20,8 +20,8 @@ const (
 var typeString = map[Env]string{
 	SandboxLogin:    "https://sandbox-login.klktech.com",
 	ProductionLogin: "https://login.klktech.com",
-	Sandbox:         "http://sandbox-api.klktech.com",
-	Production:      "http://api.klktech.com",
+	Sandbox:         "https://sandbox-api.klktech.com",
+	Production:      "https://api.klktech.com",
 }
 
 // implement stringer
