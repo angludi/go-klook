@@ -20,7 +20,7 @@ const (
 var typeString = map[Env]string{
 	SandboxLogin:    "https://agent-login.sandbox-b.klook.io",
 	ProductionLogin: "https://login.klktech.com",
-	Sandbox:         "https://agent-api.sandbox-b.klook.io/",
+	Sandbox:         "https://agent-api.sandbox-b.klook.io",
 	Production:      "https://api.klktech.com",
 }
 
