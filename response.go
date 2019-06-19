@@ -28,8 +28,11 @@ type SKUInventory struct {
 }
 
 type SKUProduct struct {
-	SKUID uint   `json:"sku_id"`
-	Title string `json:"title"`
+	SKUID     uint   `json:"sku_id"`
+	Title     string `json:"title"`
+	SKUMinPax uint   `json:"sku_min_pax"`
+	SKUMaxPax uint   `json:"sku_max_pax"`
+	Required  bool   `json:"required"`
 }
 
 type Schedule struct {
@@ -155,11 +158,24 @@ type ExtraInfo struct {
 
 // Product
 type Product struct {
-	ProductID string       `json:"product_id"`
-	Title     string       `json:"title"`
-	Detail    string       `json:"detail"`
-	SKUS      []SKUProduct `json:"skus"`
-	ExtraInfo ExtraInfo    `json:"extra_info"`
+	ProductID           string       `json:"product_id"`
+	Title               string       `json:"title"`
+	Detail              string       `json:"detail"`
+	SKUS                []SKUProduct `json:"skus"`
+	ExtraInfo           ExtraInfo    `json:"extra_info"`
+	ConfirmationType    string       `json:"confirmation_type"`
+	CancelationType     string       `json:"cancelation_type"`
+	VoucherUsage        string       `json:"voucher_usage"`
+	ConfirmationDetails string       `json:"confirmation_details"`
+	VoucherTypeDesc     string       `json:"voucher_type_desc"`
+	VoucherValidity     string       `json:"voucher_validity"`
+	RedemptionProcess   string       `json:"redemption_process"`
+	VoucherIdentity     string       `json:"voucher_identity"`
+	OpenHours           string       `json:"open_hours"`
+	Transportation      string       `json:"transportation"`
+	PickUpProcedure     string       `json:"pick_up_procedure"`
+	ProductMinPax       uint         `json:"product_min_pax"`
+	ProductMaxPax       uint         `json:"product_max_pax"`
 }
 
 // Detail Activity
