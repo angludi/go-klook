@@ -1,6 +1,7 @@
 package klook
 
 import (
+	"crypto/tls"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -27,6 +28,7 @@ var defHTTPTimeout = 80 * time.Second
 var httpClient = &http.Client{Timeout: defHTTPTimeout}
 
 func (c *Client) Call(method, path string, headers []Header, body io.Reader, v interface{}) error {
+	http.DefaultTransport.(*http.Transport).TLSClientConfig = &tls.Config{InsecureSkipVerify: true}
 	req, err := http.NewRequest(method, path, body)
 	if err != nil {
 		fmt.Println("Request creation failed : ", err)
