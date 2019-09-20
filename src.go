@@ -150,8 +150,8 @@ func (gateway *Gateway) CekAvailability(r AvailabilityRequest) (bool, error) {
 }
 
 // Detail Order
-func (gateway *Gateway) GetDetailOrder(hash string) (Order, error) {
-	var resp Order
+func (gateway *Gateway) GetDetailOrder(hash string) (OrderDetail, error) {
+	var resp OrderDetail
 	var url = gateway.Client.APIEnvType.String() + "/v2/orders/" + hash
 
 	headers := gateway.SetHeader()

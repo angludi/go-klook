@@ -68,6 +68,36 @@ type Cancellation struct {
 	Error          ErrorResponse `json:"error"`
 }
 
+type CancelationRequest struct {
+	RefundID       uint   `json:"refund_id"`
+	Timestamp      uint   `json:"timestamp"`
+	RefundAmount   string `json:"refund_amount"`
+	TransactionFee string `json:"transaction_fee"`
+	Currency       string `json:"currency"`
+	Status         string `json:"status"`
+}
+
+type OrderBooking struct {
+	ActivityName     string     `json:"activity_name"`
+	PackageName      string     `json:"package_name"`
+	ConfirmStatus    string     `json:"confirm_status"`
+	VoucherUrl       string     `json:"voucher_url"`
+	FileType         uint       `json:"file_type"`
+	SKUS             []SKUOrder `json:"skus"`
+	BookingRefNumber string     `json:"booking_ref_number"`
+}
+
+type OrderDetail struct {
+	Success            bool               `json:"success"`
+	AgentOrderID       string             `json:"agent_order_id"`
+	KLKTechOrderID     string             `json:"klktech_order_id"`
+	TotalAmount        string             `json:"total_amount"`
+	Currency           string             `json:"currency"`
+	CancelationRequest CancelationRequest `json:"cancelation_request"`
+	Bookings           []OrderBooking     `json:"bookings"`
+	Error              ErrorResponse      `json:"error"`
+}
+
 type Order struct {
 	Success        bool          `json:"success"`
 	AgentOrderID   string        `json:"agent_order_id"`
