@@ -15,6 +15,7 @@ type Client struct {
 	APIEnvType      Env
 	ClientID        uint
 	ClientSecret    string
+	APIKey          string
 }
 
 func NewClient() Client {
