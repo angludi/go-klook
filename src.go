@@ -16,16 +16,16 @@ type Gateway struct {
 func (gateway *Gateway) SetHeader() []Header {
 	var headers []Header
 
-	token, err := gateway.GetToken()
-	if err != nil {
-		fmt.Println(err.Error())
-		return headers
-	}
+	// token, err := gateway.GetToken()
+	// if err != nil {
+	// 	fmt.Println(err.Error())
+	// 	return headers
+	// }
 
 	headers = []Header{
 		Header{
-			Key:   "Authorization",
-			Value: "Bearer " + token,
+			Key:   "X-API-KEY",
+			Value: gateway.Client.ClientSecret,
 		},
 		Header{
 			Key:   "Content-Type",
