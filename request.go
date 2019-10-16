@@ -24,7 +24,6 @@ type Contact struct {
 	Email      string `json:"email"`
 	Title      string `json:"title"`
 	Country    string `json:"country"`
-	Language   string `json:"language"`
 }
 
 type TravelerInfo struct {
