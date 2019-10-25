@@ -241,3 +241,11 @@ type DetailActivityResponse struct {
 	Activity Activity      `json:"activity"`
 	Error    ErrorResponse `json:"error"`
 }
+
+type Balance struct {
+	Success          bool          `json:"success"`
+	RemainingBalance string        `json:"remaining_balance"`
+	Currency         string        `json:"currency"`
+	Timestamp        uint          `json:"timestamp"`
+	Error            ErrorResponse `json:"error"`
+}

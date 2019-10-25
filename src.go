@@ -228,3 +228,17 @@ func (gateway *Gateway) GetSchedule(req ScheduleRequest) (Schedules, error) {
 
 	return resp, nil
 }
+
+func (gateway *Gateway) GetBalance() (Balance, error) {
+	var resp Balance
+	var url = gateway.Client.APIEnvType.String() + "/v2/balance"
+
+	headers := gateway.SetHeader()
+
+	_ = gateway.Client.Call("GET", url, headers, nil, &resp)
+	if !govalidator.IsNull(resp.Error.Code) {
+		return resp, errors.New(resp.Error.Message)
+	}
+
+	return resp, nil
+}
