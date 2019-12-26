@@ -38,7 +38,7 @@ type SKUProduct struct {
 type Schedule struct {
 	ProductID      string         `json:"product_id"`
 	Date           string         `json:"date"`
-	TimeSlot       string         `json:"time_slot"`
+	TimesSlot      string         `json:"times_slot"`
 	SKUInventories []SKUInventory `json:"sku_inventory"`
 }
 
