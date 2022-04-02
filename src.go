@@ -217,7 +217,7 @@ func (gateway *Gateway) GetSchedule(req ScheduleRequest) (Schedules, error) {
 	var resp Schedules
 	var url = gateway.Client.APIEnvType.String() + "/v2/products/" + req.ProductID + "/schedules"
 
-	params := "?lang=" + req.Language + "&amp;start_date=" + req.StartDate + "&amp;end_date=" + req.EndDate
+	params := "?start_date=" + req.StartDate + "&end_date=" + req.EndDate
 
 	headers := gateway.SetHeader()
 
